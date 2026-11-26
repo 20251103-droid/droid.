@@ -1,0 +1,353 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+}
+
+body {
+  background-color: #0f0f1e;
+  color: #eaeef2;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 導覽列 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a2e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f9d423, #ff4e50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #eaeef2;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #2a2a4a;
+  color: #f9d423;
+}
+
+.nav-links a.active {
+  background-color: #f9d423;
+  color: #0f0f1e;
+  font-weight: bold;
+}
+
+/* 主要內容 */
+main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+
+/* Hero 區 */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at 20% 30%, #1e2a4a, #0f0f1e);
+  border-radius: 32px;
+  margin-bottom: 2.5rem;
+  border: 1px solid #2a2a5a;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: linear-gradient(to right, #f9d423, #ff4e50, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.subhead {
+  font-size: 1.2rem;
+  color: #b0b8c5;
+  margin-bottom: 2rem;
+}
+
+.btn-start {
+  background: linear-gradient(135deg, #f9d423, #ff4e50);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f0f1e;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 20px rgba(249, 212, 35, 0.3);
+}
+
+.btn-start:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(249, 212, 35, 0.5);
+}
+
+.btn-start:active {
+  transform: scale(0.98);
+}
+
+.game-message {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  min-height: 2rem;
+  color: #a0f0a0;
+  font-weight: 500;
+}
+
+/* Features 卡片 */
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 6px solid #f9d423;
+  padding-left: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+}
+
+.card {
+  background-color: #1a1a2e;
+  padding: 1.8rem 1.5rem;
+  border-radius: 24px;
+  border: 1px solid #2a2a5a;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #f9d423;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #f9d423;
+}
+
+/* 介紹頁 */
+.page-intro {
+  margin-bottom: 2.5rem;
+}
+
+.page-intro h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #f9d423, #ff8c42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-intro p {
+  color: #b0b8c5;
+  font-size: 1.15rem;
+  max-width: 900px;
+}
+
+.products-list h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 6px solid #f9d423;
+  padding-left: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.product-item {
+  background-color: #1a1a2e;
+  padding: 1.8rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #2a2a5a;
+  transition: all 0.3s;
+}
+
+.product-item:hover {
+  background-color: #22223e;
+  border-color: #f9d423;
+}
+
+.product-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #f9d423;
+}
+
+.product-item p {
+  color: #b0b8c5;
+}
+
+/* 聯絡頁 */
+.contact-info h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #f9d423, #ff8c42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.info-block {
+  background-color: #1a1a2e;
+  padding: 2rem;
+  border-radius: 24px;
+  border: 1px solid #2a2a5a;
+  margin-bottom: 2.5rem;
+}
+
+.info-block p {
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.info-block a {
+  color: #f9d423;
+  text-decoration: none;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 6px solid #f9d423;
+  padding-left: 1rem;
+}
+
+#contactForm {
+  background-color: #1a1a2e;
+  padding: 2rem;
+  border-radius: 24px;
+  border: 1px solid #2a2a5a;
+  max-width: 700px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #d0d8e5;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background-color: #0f0f1e;
+  border: 1px solid #3a3a6a;
+  border-radius: 14px;
+  color: #eaeef2;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f9d423;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #f9d423, #ff4e50);
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0f0f1e;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 16px rgba(249, 212, 35, 0.3);
+}
+
+.btn-submit:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 22px rgba(249, 212, 35, 0.5);
+}
+
+.form-feedback {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  min-height: 1.8rem;
+  color: #a0f0a0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1a1a2e;
+  color: #8890a0;
+  font-size: 0.95rem;
+  border-top: 1px solid #2a2a5a;
+  margin-top: 2rem;
+}
+
+/* 響應式 */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn-start {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
